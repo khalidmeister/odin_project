@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            var compChoice;
+            var playerChoice;
+
+            function compChoiceGenerator(){
+                choice = ['rock','paper','scissor'];
+                compChoice = choice[Math.floor(Math.random() * 3)];
+            }
+
+            function gameLogic(){
+                playerChoice = prompt("Rock, Paper, Scissor?");
+                playerChoice = playerChoice.toLowerCase();
+                if(playerChoice == 'rock'){
+                    if(compChoice == 'scissor')
+                        console.log('You Win!');
+                    else if(compChoice == 'paper')
+                        console.log('You Lose!');
+                }
+
+                if(playerChoice == 'paper'){
+                    if(compChoice == 'rock')
+                        console.log('You Win!');
+                    else if(compChoice == 'scissor')
+                        console.log('You Lose!');
+                }
+
+                if(playerChoice == 'scissor'){
+                    if(compChoice == 'paper')
+                        console.log('You Win!');
+                    else if(compChoice == 'rock')
+                        console.log('You Lose!');
+                }
+                
+                console.log("You Choose " + playerChoice);
+                console.log("The computer chooses " + compChoice);
+            }
+
+            compChoiceGenerator();
+            gameLogic();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
